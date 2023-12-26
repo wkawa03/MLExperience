@@ -1,0 +1,61 @@
+{
+    "name": "mlexperience-frontend",
+    "version": "1.0.0",
+    "description": "Frontend for the machine learning web app",
+    "main": "index.tsx",
+    "scripts": {
+        "build": "webpack --mode=production",
+        "start": "node server.js",
+        "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@material-ui/system": "^4.12.2",
+        "@mui/material": "^5.14.18",
+        "@mui/styled-engine-sc": "^6.0.0-alpha.6",
+        "@mui/x-charts": "^6.18.1",
+        "@mui/x-data-grid": "^6.18.1",
+        "axios": "^0.21.1",
+        "bootstrap": "^4.6.0",
+        "dotenv": "^16.3.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-hot-loader": "^4.13.1",
+        "react-scripts": "4.0.3",
+        "reactstrap": "^8.9.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/react-dom": "^18.2.15",
+        "@typescript-eslint/eslint-plugin": "^6.10.0",
+        "@typescript-eslint/parser": "^6.10.0",
+        "css-loader": "^6.8.1",
+        "eslint": "^8.55.0",
+        "eslint-config-airbnb": "19.0.4",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "prettier": "^3.0.3",
+        "style-loader": "^3.3.3",
+        "ts-loader": "^9.5.0",
+        "typescript": "^4.9.5",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    }
+}

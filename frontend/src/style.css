@@ -1,0 +1,170 @@
+/*****************************************************************************
+ * 機能：機械学習簡易体験システム スタイルシート
+ * 概要：システム全体のCSSクラスを定義する。
+ *****************************************************************************/
+html {
+    scroll-behavior: smooth;    /* スクロール動作 */
+}
+/* スクロールバー */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+/* スクロールバー背景 */
+*::-webkit-scrollbar-track {
+    background: #181818;
+}
+/* スクロールバー角 */
+*::-webkit-scrollbar-corner {
+    background-color: #181818;
+}
+/* スクロールバー本体 */
+*::-webkit-scrollbar-thumb {
+    background: #555;
+}
+/* スクロールバー本体 ホバー時 */
+*::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+/* Firefox スクロールバー設定 */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #181818;
+}
+
+/* サイドメニュー */
+.body .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    padding: 50px 0px 50px 40px;
+    background-color:#181818;
+    border-right: 1px solid #555;
+    z-index: 2;
+}
+/* メインコンテンツ */
+.body .main-cont {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 30px 50px;
+    width: 80%;
+    min-width: 1100px;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+/* フレーム */
+.frame {
+    background-color: #252525;
+    border-radius: 5px;
+    padding: 30px;
+}
+/* 区切り線 */
+.separator-line {
+    background-color: #555;
+    height: 2px;
+    margin: 40px -30px;
+}
+
+/* 下線付きテキスト */
+.text-def {
+    white-space: nowrap !important;
+}
+/* 下線付きテキスト */
+.text-UL {
+    text-decoration: underline;
+    white-space: nowrap !important;
+}
+/* ハイパーパラメータ テキスト */
+.text-hParam {
+    text-decoration: underline;
+    text-align: center;
+    white-space: nowrap !important;
+}
+
+/* リンク */
+.a-inherit {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+.a-inherit:hover, .a-inherit:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* マージン */
+.margin-section {
+    margin-top: 60px;
+}
+.margin-cont {
+    margin-top: 30px;
+}
+.margin-sentence {
+    margin-top: 15px;
+}
+.margin-list {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* データグリッド */
+.datagrid {
+    height: 400px;
+}
+
+/* グリッド デフォルト */
+.grid-def {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+}
+/* グリッド ニューラルネットワーク設定 */
+.grid-setNn {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 900px;
+}
+.grid-setNn > .info {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    padding: 0px 25px;
+    height: 60px;
+}
+.grid-setNn > .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #555;
+    padding: 0px 25px;
+    height: 150px;
+}
+/* グリッド ハイパーパラメータ */
+.grid-hParam {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+/* グリッド 指標 */
+.grid-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+/* グリッド ターゲット予測値／正解値 */
+.grid-tValues {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    row-gap: 10px;
+    overflow-x: auto;
+}
