@@ -64,7 +64,7 @@ export default function ExecLearning() {
         {/* 学習エラーメッセージ */}
         {(fetchError === FETCH_REQ.Learning) && (
           <div className="text-def" style={{ color: "red" }}>
-            サーバーとの通信エラーが発生しました。しばらく待って再度実行してください。<br />
+            サーバとの通信エラーが発生しました。しばらく待って再度実行してください。<br />
             何度も発生する場合、サーバの処理限界を超過している可能性がありますので、モデルの設定を見直してください。
           </div>
         )}

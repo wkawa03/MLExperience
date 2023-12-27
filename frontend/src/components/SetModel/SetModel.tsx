@@ -68,7 +68,7 @@ export default function SetModel() {
           {(waitFetch === FETCH_REQ.Optimize) && (<CircularProgress style={{ marginLeft: 20 }} />)}
           {/* 自動設定(最適化)エラーメッセージ */}
           {(fetchError === FETCH_REQ.Optimize) && (
-            <div style={{ color: "red" }}>サーバーとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
+            <div style={{ color: "red" }}>サーバとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
           )}
         </div>
       </>)}

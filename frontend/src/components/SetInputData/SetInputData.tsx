@@ -272,7 +272,7 @@ export default function SetInputData(props: {
         {(waitFetch === FETCH_REQ.Import) && (<CircularProgress />)}
         {/* インポートエラーメッセージ */}
         {(fetchError === FETCH_REQ.Import) && (
-          <div className="text-def" style={{ color: "red" }}>サーバーとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
+          <div className="text-def" style={{ color: "red" }}>サーバとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
         )}
       </div>
 
@@ -303,7 +303,7 @@ export default function SetInputData(props: {
           {(waitFetch === FETCH_REQ.Preproc) && (<CircularProgress />)}
           {/* 前処理エラーメッセージ */}
           {(fetchError === FETCH_REQ.Preproc) && (
-            <div className="text-def" style={{ color: "red" }}>サーバーとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
+            <div className="text-def" style={{ color: "red" }}>サーバとの通信エラーが発生しました。しばらく待って再度実行してください。</div>
           )}
         </div>
 
