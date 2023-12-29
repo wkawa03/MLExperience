@@ -54,9 +54,8 @@ def ExecLearning_Nn(df, paramDict):
     testLoss = round(testMetrics["losses"][0], 2)
     
     # 回帰問題の場合
-    if problem == PROBLEM.regression:
-        
-        # 検証データ損失値および、ターゲット予測値／正解値を返す
+    if problem == PROBLEM.regression:        
+        # 損失値および、ターゲット予測値／正解値を返す
         yPred = [round(pred, 2) for pred in model.yPred]
         yTest = [round(test, 2) for test in model.yTest]
         
@@ -219,7 +218,7 @@ class Net(pl.LightningModule):
         # 順伝播処理
         yPred = self(x)
         
-        # 損失関数を算出
+        # 損失値を算出
         loss = self.lf(yPred, yTest)
         # ステップ毎の損失値を保存
         metrics = self.metrics[learnPhase]["step"]
@@ -362,7 +361,7 @@ def GetMetricsDict_Main():
 # 概要：従来モデルによる学習を行う。
 def ExecLearning_Trdt(df, paramDict):
     # 分析問題取得処理
-    problem, uniqueNum = GetProblem(df, paramDict["target"])
+    problem, _ = GetProblem(df, paramDict["target"])
 
     # ランダムフォレスト
     if paramDict["model"] == MODEL.rf.value:
@@ -409,12 +408,12 @@ def ExecLearning_Trdt(df, paramDict):
                                          algorithm=paramDict["algorithm"], metric=paramDict["metric"])
     
     # 予測処理の結果を返す
-    return Predict(df, paramDict["target"], model, problem, uniqueNum)
+    return Predict(df, paramDict["target"], model, problem)
 
 
 # 機能：予測処理
-# 概要：データを訓練データとテストデータに分割する。
-def Predict(df, target, model, problem, uniqueNum):
+# 概要：モデルの学習とターゲットの予測を行う。
+def Predict(df, target, model, problem):
     # 入力データを取得
     x = df.drop(columns=[target]).values
     # ターゲットデータを取得
