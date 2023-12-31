@@ -65,11 +65,12 @@ def GetProblem(df, target):
 # field     : 列名
 # headerName: 列和名
 # fillna    : 欠損値の処置 ("mode": 最頻値, "groupMedian": 指定グループ内の中央値, 左記以外: その値を設定)
-#         　    - "groupMedian"指定時:: "group": グループ列名 "groupName": グループの和名
+#         　    - "groupMedian"指定時パラメータ:: "group": グループ列名 "groupName": グループの和名
 # targetNotDrop: fillnaが指定されている際にTrueを指定すると、ターゲット列の場合に欠損値であるデータを削除しない
 # proc      : 前処理内容 ("drop": 列削除 "index": インデックス値変換 "cut": ビン分割 "onehot": ワンホットエンコーディング)
-#               - "cut"指定時:: "bins": 単一整数でその分位数で分割、リストでその範囲で分割
-# 　　 　　　　　　　　　　       "labels": "bins"でリスト指定時の各範囲のインデックス値リスト
+#               - "cut"指定時パラメータ:: "bins": 単一整数でその分位数で分割、リストでその範囲で分割
+# 　　 　　　　　　　　　　                "labels": "bins"でリスト指定時の各範囲のインデックス値リスト
+#               - "onehot"指定時パラメータ:: "drop": 削除する列の分類名
 #
 def GetPreprocDict(selectData):
     # タイタニック号 乗客リスト
